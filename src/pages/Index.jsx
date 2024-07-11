@@ -1,10 +1,15 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const throwError = () => {
+    throw new Error("This is a test error");
+  };
+
   return (
-    <div className="text-center">
-      <h1 className="text-3xl">Your Blank Canvas</h1>
-      <p>Chat with the agent to start making edits.</p>
+    <div className="flex items-center justify-center min-h-screen">
+      <Button onClick={throwError} className="mx-auto object-cover">
+        Throw Error
+      </Button>
     </div>
   );
 };
